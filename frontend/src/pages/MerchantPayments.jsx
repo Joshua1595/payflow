@@ -62,6 +62,7 @@ function MerchantPayments() {
 
   const getStatusClass = (status) => {
     if (status === "completed") return "bg-emerald-50 text-emerald-700";
+    if (status === "created") return "bg-blue-50 text-blue-700";
     if (status === "failed") return "bg-red-50 text-red-700";
     if (status === "pending") return "bg-amber-50 text-amber-700";
     return "bg-gray-100 text-gray-600";
@@ -141,6 +142,7 @@ function MerchantPayments() {
               className="w-full md:w-64 px-4 py-2.5 rounded-xl border border-gray-200 bg-white text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-shadow"
             >
               <option value="">All Payments</option>
+              <option value="created">Created</option>
               <option value="pending">Pending</option>
               <option value="completed">Completed</option>
               <option value="failed">Failed</option>
